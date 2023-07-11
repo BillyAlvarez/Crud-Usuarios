@@ -1,5 +1,7 @@
 package com.example.demo1;
 
+import cl.daos.UsuarioDAO;
+import cl.modelos.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -25,18 +27,23 @@ public class GuardarUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombre = request.getParameter("nombre");
         String email =request.getParameter("email");
+        String apellido = request.getParameter("apellido");
         String telefono = request.getParameter("telefono");
-
-        request.setAttribute("nombre", nombre);
-        request.setAttribute("email", email);
-        request.setAttribute("telefono", telefono);
-
-        Usuario usuario;
-        usuario = new Usuario(nombre, email, telefono);
-        listaUsuarios.add(usuario);
-        request.setAttribute("listaUsuarios", listaUsuarios);
+        String fechaCreacion =request.getParameter("fechaCreacion");
 
 
+
+        Usuario usuario = new Usuario();
+        usuario.setNombre(nombre);
+        usuario.setApellido(apellido);
+        usuario.setEmail(email);
+        usuario.setTelefono(telefono);
+        usuario.setFechaCreacionCuenta(fechaCreacion);
+
+        UsuarioDAO usuarioDAO = UsuarioDAO.getInstancia();
+        usuarioDAO.agregarUsuario(usuario);;
+
+//llamar a goToListUsers
         request.getRequestDispatcher("listarUsuario.jsp").forward(request, response);
     }
 }

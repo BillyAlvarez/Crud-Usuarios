@@ -1,5 +1,6 @@
 package com.example.demo1;
 
+import cl.modelos.Usuario;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

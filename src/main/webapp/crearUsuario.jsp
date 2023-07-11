@@ -18,12 +18,20 @@
             <input type="text" name="nombre" id="nombre" class="form-control" required>
         </div>
         <div class="form-group">
+            <label for="nombre">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" class="form-control" required>
+        </div>
+        <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="telefono">Teléfono:</label>
             <input type="text" name="telefono" id="telefono" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="fechaCreacion">Fecha Creacion:</label>
+            <input type="text" name="fechaCreacion" id="fechaCreacion" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
     </form>
