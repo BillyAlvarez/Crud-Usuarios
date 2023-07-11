@@ -8,15 +8,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
-
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet(name = "GuardarUsuario", value = "/GuardarUsuario")
 public class GuardarUsuario extends HttpServlet {
 
-    ArrayList<Usuario> listaUsuarios =  new ArrayList<>();
+    ArrayList<Usuario> listaUsuarios = new ArrayList<>();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,11 +25,10 @@ public class GuardarUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String nombre = request.getParameter("nombre");
-        String email =request.getParameter("email");
+        String email = request.getParameter("email");
         String apellido = request.getParameter("apellido");
         String telefono = request.getParameter("telefono");
-        String fechaCreacion =request.getParameter("fechaCreacion");
-
+        String fechaCreacion = request.getParameter("fechaCreacion");
 
 
         Usuario usuario = new Usuario();
@@ -41,9 +39,12 @@ public class GuardarUsuario extends HttpServlet {
         usuario.setFechaCreacionCuenta(fechaCreacion);
 
         UsuarioDAO usuarioDAO = UsuarioDAO.getInstancia();
-        usuarioDAO.agregarUsuario(usuario);;
+        usuarioDAO.agregarUsuario(usuario);
 
-//llamar a goToListUsers
+
+        List<Usuario> usuarios = usuarioDAO.obtenerUsuarios();
+
+        request.setAttribute("usuarios", usuarios);
         request.getRequestDispatcher("listarUsuario.jsp").forward(request, response);
     }
 }

@@ -89,7 +89,7 @@ public class UsuarioDAO {
     }
 
     public void agregarUsuario(Usuario usuario) {
-        String consulta = "INSERT INTO usuarios (nombre,apellido email,telefono,fechaCreacionCuenta) VALUES (?, ?,?,?,?)";
+        String consulta = "INSERT INTO usuarios (nombre,apellido,email,telefono,fechaCreacionCuenta) VALUES (?, ?,?,?,?)";
 
         try (
         		

@@ -24,8 +24,8 @@
       <th>Apellido</th>
       <th>Email</th>
       <th>Teléfono</th>
-      <th>fecha de Creacion</th>
-
+      <th>Fecha de Creación</th>
+      <th>Acciones</th>
     </tr>
     </thead>
     <tbody>
@@ -38,6 +38,10 @@
       <td><%= usuario.getEmail() %></td>
       <td><%= usuario.getTelefono() %></td>
       <td><%= usuario.getFechaCreacionCuenta() %></td>
+      <td>
+        <a href="editarUsuario.jsp?id=<%= usuario.getId() %>" class="btn btn-primary btn-sm">Editar</a>
+        <a href="eliminarUsuario?id=<%= usuario.getId() %>" class="btn btn-danger btn-sm">Eliminar</a>
+      </td>
     </tr>
     <% } %>
     </tbody>
