@@ -40,7 +40,7 @@
       <td><%= usuario.getFechaCreacionCuenta() %></td>
       <td>
         <a href="EditarUsuario?id=<%= usuario.getId() %>" class="btn btn-primary btn-sm">Editar</a>
-        <a href="eliminarUsuario?id=<%= usuario.getId() %>" class="btn btn-danger btn-sm">Eliminar</a>
+        <a href="EliminarUsuario?id=<%= usuario.getId() %>" class="btn btn-danger btn-sm">Eliminar</a>
       </td>
     </tr>
     <% } %>
