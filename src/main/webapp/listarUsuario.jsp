@@ -39,7 +39,7 @@
       <td><%= usuario.getTelefono() %></td>
       <td><%= usuario.getFechaCreacionCuenta() %></td>
       <td>
-        <a href="editarUsuario.jsp?id=<%= usuario.getId() %>" class="btn btn-primary btn-sm">Editar</a>
+        <a href="EditarUsuario?id=<%= usuario.getId() %>" class="btn btn-primary btn-sm">Editar</a>
         <a href="eliminarUsuario?id=<%= usuario.getId() %>" class="btn btn-danger btn-sm">Eliminar</a>
       </td>
     </tr>

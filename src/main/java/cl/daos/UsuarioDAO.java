@@ -109,7 +109,7 @@ public class UsuarioDAO {
     }
 
     public void actualizarUsuario(Usuario usuario) {
-        String consulta = "UPDATE usuarios SET nombre = ?,apellido = ?, email =? , telefono = ? , fechaCreacionCuenta = ? = WHERE id = ?";
+        String consulta = "UPDATE usuarios SET nombre = ?,apellido = ?, email =? , telefono = ? , fechaCreacionCuenta = ? WHERE id = ?";
 
         try (PreparedStatement statement = conexion.prepareStatement(consulta)) {
             statement.setString(1, usuario.getNombre());
