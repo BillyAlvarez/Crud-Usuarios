@@ -11,11 +11,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Listar Usuarios</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container">
-  <h1>Listar Usuarios</h1>
+  <%@include file="navbar.jsp"%>
+  <h1>Usuarios</h1>
   <table class="table table-striped">
     <thead>
     <tr>
@@ -46,11 +47,15 @@
     <% } %>
     </tbody>
   </table>
-  <div class="text-right">
+  <div class="text-right"><br>
     <a href="crearUsuario.jsp" class="btn btn-primary">Agregar nuevo usuario</a>
-  </div>
+  </div><br>
+  <%@include file="footer.jsp"%>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
+
 </html>
