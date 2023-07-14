@@ -20,15 +20,11 @@ public class EliminarUsuario extends HttpServlet {
         UsuarioDAO usuarioDAO = UsuarioDAO.getInstancia();
         usuarioDAO.eliminarUsuario(id);
 
-
         List<Usuario> usuarios = usuarioDAO.obtenerUsuarios();
 
         request.setAttribute("usuarios", usuarios);
         request.getRequestDispatcher("listarUsuario.jsp").forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    }
 }

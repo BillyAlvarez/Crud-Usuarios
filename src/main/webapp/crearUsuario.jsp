@@ -32,7 +32,7 @@
         </div>
         <div class="form-group">
             <label for="fechaCreacion">Fecha Creacion:</label>
-            <input type="text" name="fechaCreacion" id="fechaCreacion" class="form-control" required>
+            <input type="date" name="fechaCreacion" id="fechaCreacion" class="form-control" required>
         </div><br>
         <button type="submit" class="btn btn-primary">Guardar</button>
     </form><br>

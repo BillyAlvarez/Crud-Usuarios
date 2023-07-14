@@ -1,6 +1,8 @@
 <%@ page import="cl.modelos.Usuario" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-
+<%
+    request.getRequestDispatcher("ValidarSession").include(request, response);
+%>
 
 <html>
 <head>
@@ -19,7 +21,7 @@
             <input type="text" class="form-control" name="nombre" value="<%= usuario.getNombre() %>">
         </div>
         <div class="form-group">
-            <label>apellido:</label>
+            <label>Apellido:</label>
             <input type="text" class="form-control" name="apellido" value="<%= usuario.getApellido() %>">
         </div>
         <div class="form-group">
@@ -32,7 +34,7 @@
         </div>
         <div class="form-group">
             <label>Fecha Creacion:</label>
-            <input type="text" class="form-control" name="fechaCreacionCuenta" value="<%= usuario.getFechaCreacionCuenta() %>">
+            <input type="date" class="form-control" name="fechaCreacionCuenta" value="<%= usuario.getFechaCreacionCuenta() %>">
         </div><div><br></div>
         <button type="submit" class="btn btn-primary">Actualizar</button>
     </form>

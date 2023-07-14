@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container">
-    <%@ include file="navbar.jsp" %>
+
     <div class="row justify-content-center align-items-center vh-100">
         <div class="col-md-4">
             <div class="card">

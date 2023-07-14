@@ -24,8 +24,4 @@ public class GoToListUsers extends HttpServlet {
         request.getRequestDispatcher("listarUsuario.jsp").forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }
